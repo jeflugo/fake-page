@@ -1,0 +1,96 @@
+@media (min-width: 540px) {
+	.container {
+		width: 500px;
+	}
+
+	.contact-body {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.email-form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.socials {
+		margin-top: -100px;
+	}
+
+	.inner-footer {
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 750px) {
+	.container {
+		width: 720px;
+	}
+
+	.inner-header {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.hamburguer {
+		display: none;
+	}
+
+	.navbar {
+		margin-top: 0;
+		display: inline-block;
+	}
+
+	.navbar ul {
+		display: flex;
+		justify-content: space-between;
+		width: 300px;
+	}
+
+	.head {
+		background-position: 0 -130px;
+	}
+
+	.inner-cta {
+		align-items: flex-start;
+	}
+
+	.cta-msg {
+		text-align: left;
+	}
+
+	.about-body {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		text-align: left;
+	}
+
+	.description {
+		width: 300px;
+		margin-top: -40px;
+	}
+
+	.subject,
+	.email-text {
+		width: 450px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.container {
+		width: 1000px;
+	}
+
+	.cta {
+		height: 500px;
+	}
+
+	.head {
+		background-position: 0 -180px;
+		background-size: 1500px;
+	}
+}

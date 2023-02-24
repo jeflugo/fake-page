@@ -1,0 +1,63 @@
+:root {
+	--bar-width: 40px;
+	--bar-height: 3px;
+	--bar-gap: 4px;
+
+	--hamburguer-background: #333;
+
+	--animation-timing: 200ms ease-in-out;
+
+	--hamburguer-height: calc(var(--bar-height) * 3 + var(--bar-gap) * 2);
+
+	--x-width: calc(var(--hamburguer-height) * 1.41421356237);
+}
+
+.hamburguer {
+	display: flex;
+	flex-direction: column;
+	gap: var(--bar-gap);
+	width: max-content;
+	/* background-color: red; */
+	cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer input,
+.hamburguer::after {
+	content: '';
+	width: var(--bar-width);
+	height: var(--bar-height);
+	background-color: var(--hamburguer-background);
+	border-radius: 99999px;
+
+	transform-origin: left center;
+	transition: opacity var(--animation-timing), width var(--animation-timing),
+		rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburguer input {
+	appearance: none;
+	outline: none;
+	pointer-events: none;
+}
+
+.hamburguer:has(input:checked)::before {
+	rotate: 45deg;
+	width: var(--x-width);
+	translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburguer:has(input:checked) {
+	width: var(--x-width);
+}
+
+.hamburguer:has(input:checked)::after {
+	rotate: -45deg;
+	width: var(--x-width);
+	translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburguer input:checked {
+	opacity: 0;
+	width: 0;
+}
