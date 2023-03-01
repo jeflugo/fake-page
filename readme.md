@@ -4,4 +4,4 @@
 
 HTML5, CSS3
 
-[Go to the page](https://github.com/jeflugo/fake-page 'Fake page')
+[Go to the page](https://portfolio-jeferson-fake-page.netlify.app/ 'Fake page')
